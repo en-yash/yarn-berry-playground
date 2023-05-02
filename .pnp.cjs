@@ -14,11 +14,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "yarn-berry-playground",\
         "reference": "workspace:."\
+      },\
+      {\
+        "name": "@yash/linter",\
+        "reference": "workspace:packages/linter"\
+      },\
+      {\
+        "name": "@yash/logger",\
+        "reference": "workspace:packages/logger"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@yash/linter", ["workspace:packages/linter"]],\
+      ["@yash/logger", ["workspace:packages/logger"]],\
       ["yarn-berry-playground", ["workspace:."]]\
     ],\
     "fallbackPool": [\
@@ -29,6 +39,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["lodash", "npm:4.17.21"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@yash/linter", [\
+        ["workspace:packages/linter", {\
+          "packageLocation": "./packages/linter/",\
+          "packageDependencies": [\
+            ["@yash/linter", "workspace:packages/linter"],\
+            ["@yash/logger", "workspace:packages/logger"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@yash/logger", [\
+        ["workspace:packages/logger", {\
+          "packageLocation": "./packages/logger/",\
+          "packageDependencies": [\
+            ["@yash/logger", "workspace:packages/logger"]\
           ],\
           "linkType": "SOFT"\
         }]\

@@ -5,6 +5,20 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@yash/linter@workspace:packages/linter":
+  version: 0.0.0-use.local
+  resolution: "@yash/linter@workspace:packages/linter"
+  dependencies:
+    "@yash/logger": 1.0.0
+  languageName: unknown
+  linkType: soft
+
+"@yash/logger@1.0.0, @yash/logger@workspace:packages/logger":
+  version: 0.0.0-use.local
+  resolution: "@yash/logger@workspace:packages/logger"
+  languageName: unknown
+  linkType: soft
+
 "lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
