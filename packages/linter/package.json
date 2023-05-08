@@ -1,0 +1,8 @@
+{
+  "name": "@yash/linter",
+  "version": "1.0.0",
+  "packageManager": "yarn@3.5.1",
+  "dependencies": {
+    "@yash/logger": "1.0.0"
+  }
+}
